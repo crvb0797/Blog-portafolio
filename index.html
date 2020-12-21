@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Kanit&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <!--Logo del post-->
+    <link rel="icon" type="image/png" href="img/logo_2.png"> 
+
+    <title>Blog Carlos</title>
+</head>
+<body>
+
+    <!-- Menu hamburguesa -->
+    <i class="icon-menu burger-button" id="burger-menu"></i>
+    <!--Header-->
+
+    <div class="header">
+        <nav class="menu">
+            <ol>
+                <li><a href="#sobre-mi">Sobre mi</a></li>
+                <li> <a href="#experiencia">Experiencia</a> </li>
+                <li> <a href="#portafolio">Portafolio</a> </li>
+            </ol>
+        </nav>
+    </div>
+
+
+    <!--Banner de la pagina-->
+    <section class="hero">
+        <div class="container">
+            <h1>Hola! Soy <strong>Carlos Villatoro</strong><br>
+            Desarrollador <strong>WEB</strong> con <br> 
+            pasión en la  <strong>enseñanza</strong></h1>
+            <img src="img/usuario_2.jpg" alt="Logo del usuario" weigth="350px" height="300px" class="hero-image">
+        </div>
+    </section>
+
+    
+    <div class="container">  
+    <section  class="about-me">
+            <div class="img-circle"></div>
+           <!--  <img src="img/usuario_2.jpg" alt="Foto de usuario" width="150" height="150" class="img-circle"> -->
+            <p class="title-about-me" id="sobre-mi">Sobre mi</p>
+            <p class="historia">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, alias? Rerum aspernatur facilis voluptas et laborum cumque adipisci, consequatur quam veniam consectetur nihil illo nemo culpa quaerat, totam vero dolorem? Lorem, ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis nostrum tempora minima nihil, illo dignissimos error eligendi amet iure sit ipsum exercitationem provident possimus.</p>
+    </section>
+    </div>
+   
+
+    <script>
+       console.log('Hola mundo! mi primera linia en JS');
+
+       const ipad = window.matchMedia ('screen and (max-width:767px)'); 
+       const menu = document.querySelector('.menu');
+       console.log(menu);
+       const burgerButtom = document.querySelector('#burger-menu');
+       console.log(burgerButtom);
+      
+
+       /* condicion */
+        ipad.addListener(validation)
+
+        function validation(event){
+            if(event.matches){
+                burgerButtom.addEventListener('click', hideShow)
+            } else {
+                burgerButtom.removeEventListener('click', hideShow)
+            }
+        }
+
+
+       function hideShow(){
+        if(menu.classList.contains('is-active')){
+            menu.classList.remove('is-active');
+        } else {
+            menu.classList.add('is-active');
+        }
+       }
+    </script>
+</body>
+</html>
